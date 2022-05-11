@@ -1,0 +1,22 @@
+def totalweekPay (points, miles):
+    #calculate reimbursement for miles
+    milePay = miles * 0.43
+    #set weekly salary earning
+    salaryEarning = 1076.88
+    #if statement for reimbursement for meeting points
+    if points <= 18:
+        #add salary and mileage together
+        sum = salaryEarning + milePay
+        #return and round the decimal to 2 places
+        return round(sum, 2)
+    #if statement for when I work over points
+    elif points > 18:
+        #calculate extra earnings from extra points
+        extraPointPay = (points - 18) * 65
+        #add everything together
+        sum = salaryEarning + milePay + extraPointPay
+        #return and round the decimal
+        return round(sum, 2)
+
+totalweekPay(19, 130)
+
